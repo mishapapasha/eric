@@ -1,0 +1,55 @@
+
+.container {
+    width:              40rem;
+    height:             13.333rem;
+    background-color:   slategray;
+    border-radius:      0.6rem;
+}
+
+#headerContainer {
+    padding:    0.2rem;
+    text-align: center;
+}
+
+#headerTitle {
+    padding:    0.  6rem;
+}
+
+#convertor {
+    margin-top:         0.6rem;
+    text-align:         center;
+}
+
+#amountContainer {
+    display:        inline-block;
+    margin-right:   1.2rem;
+    width:          14%;
+    vertical-align: top;
+}
+
+#amount {
+    width:  100%;
+    height: 1.625rem;
+}
+
+#arrow {
+    display:        inline-block;
+    font-weight:    bold;
+    color:        blue;
+    padding:        0.33rem  0.2rem;
+    vertical-align: top;
+}
+
+.dropdownContainer {
+    display:    inline-block;
+    width:      35%;
+}
+
+.dropBtn {
+    width: 100%;
+    height: 2rem;
+}
+
+.dropdown-conent {
+    /* float: left; */
+}

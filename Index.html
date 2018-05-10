@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="./styles/theme.css" />
+        <link rel="stylesheet" type="text/css" href="./styles/convertor.css" />
+
+        <script src="./js/init.js"></script>
+        <title>Eric currency convertor</title>
+    </head>
+    <body>
+        <main class="container">
+            <header id="headerContainer">
+                <h2 id="headerTitle">welcome to my convertor</h2>
+            </header>
+            <div id="convertor">
+                <div id="amountContainer">
+                    <input id="amount" type='text' />
+                </div>
+
+                <div class="dropdownContainer">
+                    <button onclick="dropDown('from')" class="dropBtn">from</button>
+                    <div id="from" class="dropdown-conent">a</div>
+                </div>
+
+                <span id="arrow">
+                    &#8631;
+                </span>
+
+                <div class="dropdownContainer">
+                    <button onclick="dropDown('from')" class="dropBtn">to</button>
+                    <div id="to" class="dropdown-conent">b</div>
+                </div>
+
+            </div>
+        </main>
+    </body>
+</html>
