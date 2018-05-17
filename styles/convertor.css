@@ -1,5 +1,8 @@
+li {
+    list-style-type:    none;
+}
 
-.container {
+#mainContainer {
     width:              40rem;
     height:             13.333rem;
     background-color:   slategray;
@@ -15,7 +18,7 @@
     padding:    0.  6rem;
 }
 
-#convertor {
+#convertorInfo {
     margin-top:         0.6rem;
     text-align:         center;
 }
@@ -30,26 +33,62 @@
 #amount {
     width:  100%;
     height: 1.625rem;
+    text-align: center;
 }
 
 #arrow {
     display:        inline-block;
     font-weight:    bold;
-    color:        blue;
+    color:          #3498DB;
     padding:        0.33rem  0.2rem;
     vertical-align: top;
 }
 
 .dropdownContainer {
+    position:   relative;
     display:    inline-block;
     width:      35%;
 }
 
 .dropBtn {
-    width: 100%;
+    border: 0;
+    min-width: 224px;
     height: 2rem;
+    background-color:   #f1f1f1;
+    border-bottom:      2px solid #3498DB;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropBtn:hover, .dropbtn:focus {
+    background-color:   #ddd;
 }
 
 .dropdown-conent {
-    /* float: left; */
+    margin:             0;
+    padding:            0;
+    display:            none;
+    position:           absolute;
+    background-color: #ddd;
+    min-width:          224px;
+    overflow:           auto;
+    box-shadow:         0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:            1;
 }
+
+.dropDownItem {
+    padding:                5px;
+    background-color:       #f1f1f1;
+    border-bottom-style:    solid;
+    border-bottom-width:    1px; 
+    border-bottom-color:    black;
+}
+
+.dropDownItem:hover {
+    background-color:       #ddd;
+    cursor: pointer;
+}
+
+
+
+.show {display:block;}
