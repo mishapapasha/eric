@@ -53,7 +53,7 @@ li {
 .dropBtn {
     border: 0;
     min-width: 224px;
-    height: 2rem;
+    height: 32px;
     background-color:   #f1f1f1;
     border-bottom:      2px solid #3498DB;
     font-size: 16px;
@@ -92,3 +92,19 @@ li {
 
 
 .show {display:block;}
+
+#resultContainer {
+    text-align:     left;
+    margin-left:    30%;
+    margin-top:     32px;
+}
+
+#resultBtn {
+    min-width:          112px;
+    height:             32px;
+    background-color:   #f1f1f1;
+}
+
+#resultLabel {
+    margin-left:        64px;
+}
