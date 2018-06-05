@@ -5,7 +5,6 @@ li {
 #mainContainer {
     width:              40rem;
     height:             13.333rem;
-    background-color:   slategray;
     border-radius:      0.6rem;
 }
 
@@ -39,7 +38,7 @@ li {
 #arrow {
     display:        inline-block;
     font-weight:    bold;
-    color:          #3498DB;
+    color:          black;
     padding:        0.33rem  0.2rem;
     vertical-align: top;
 }
@@ -89,17 +88,16 @@ li {
     cursor: pointer;
 }
 
-
-
 .show {display:block;}
 
 #resultContainer {
     text-align:     left;
-    margin-left:    30%;
+    margin-left:    26%;
     margin-top:     32px;
 }
 
 #resultBtn {
+    float: left;
     min-width:          112px;
     height:             32px;
     background-color:   #f1f1f1;
@@ -107,4 +105,18 @@ li {
 
 #resultLabel {
     margin-left:        64px;
+}
+
+.result {
+    display: inline-block;
+    margin-left: 16px;
+    width: 90px;
+    height: 32px;
+    text-align: center;
+    background-color: white;
+}
+
+.spanResult {
+    display: inline-block;
+    padding: 7px;
 }

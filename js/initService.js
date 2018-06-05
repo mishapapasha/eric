@@ -8,7 +8,8 @@ arrow,
 toCurrency, 
 dropDownTo,
 resultBtn,
-resultSpan;
+result1,
+result2;
 
 function createConvertorHeader(header) {
     //create the header element
@@ -19,6 +20,9 @@ function createConvertorHeader(header) {
     var title = 'Welcome to my currency convertor';
     titleElemnt.id = "headerTitle";
     titleElemnt.innerHTML = title;
+    styleService.setBackGroundColor(header, 'white')
+    styleService.setBoarder(header, '4px', 'solid', 'slategray');
+    styleService.setTextColor(titleElemnt, 'slategray');
     //append title to header
     header.appendChild(titleElemnt);
     return header;
@@ -39,7 +43,7 @@ function createaAmountContainer(container) {
     amount = document.createElement('input');
     amount.type = "text";
     amount.id = "amount";
-    amount.placeholder = "default 1";
+    amount.placeholder = "amount";
     //append the input element to the container
     container.appendChild(amount);
     return container;
@@ -71,7 +75,7 @@ function createFromContainer(container) {
         dropDownFrom.classList.toggle("show");
     });
     fromCurrency.classList.add('dropBtn');
-    fromCurrency.innerHTML = "USD";
+    fromCurrency.innerHTML = baseCurrency;
     //append the button and dropdown to container
     container.appendChild(fromCurrency);
     container.appendChild(dropDownFrom);
@@ -126,35 +130,37 @@ function createResultContainer(container) {
     resultBtn = document.createElement('button');
     resultBtn.id = 'resultBtn';
     resultBtn.innerHTML = 'CONVERT';
-    resultBtn.addEventListener("click", convertAmount);
 
-    resultSpan = document.createElement('span');
-    resultSpan.id = 'resultSpan';
-    resultSpan.innerHTML = "RESULT";
+    result1 = document.createElement('div');
+    result1.classList.add('result');
 
+    var ccs1Span = document.createElement('span');
+    ccs1Span.classList.add('spanResult');
+    ccs1Span.innerHTML = "RESULT-1";
+    result1.appendChild(ccs1Span);
+
+    result2 = document.createElement('div');
+    result2.classList.add('result');
+
+    var ccs2Span = document.createElement('span');
+    ccs2Span.classList.add('spanResult');
+    ccs2Span.innerHTML = "RESULT-2";
+    result2.appendChild(ccs2Span);
+
+    resultBtn.addEventListener("click", function(){
+        ccs1Span.innerHTML = ccService1.convertAmount(amount, fromCurrency, toCurrency);
+        ccs2Span.innerHTML = ccService2.convertAmount(amount, fromCurrency, toCurrency);
+    });
+    
     container.appendChild(resultBtn);
-    container.appendChild(resultSpan);
+    container.appendChild(result1);
+    container.appendChild(result2);
     return container;
-}
-
-function convertAmount() {
-    if(!parseFloat(amount.value) || isNaN(amount.value)){
-        console.log("Amount is not a number");
-        return;
-    }
-    //console.log(amount.value);
-    var activeFromCurrency = ciService.getCurrencyByKey(fromCurrency.innerHTML);
-    var activeToCurrency = ciService.getCurrencyByKey(toCurrency.innerHTML);
-    // console.log(activeFromCurrency);
-    // console.log(activeToCurrency);
-    var result = ciService.getCurrencyByKey(baseCurrency).currency;
-    result = result * (amount.value / activeFromCurrency.currency) * activeToCurrency.currency;
-    resultSpan.innerHTML = result.toFixed(4) + activeToCurrency.sign;
 }
 
 window.onload = function() {
     var main = document.getElementById('mainContainer');
-
+    styleService.setBackGroundColor(main, 'slategray');
     //create header
     header = createConvertorHeader(header);
 

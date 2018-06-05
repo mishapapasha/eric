@@ -6,11 +6,11 @@ var ciService = {};
 var currencies = {
     'USD':  {
         'currency': 1,
-        'sign':     ''
+        'sign':     '$'
     },
     'EUR':  {
         'currency': 0.844798,
-        'sign':     ''
+        'sign':     '&euro;'
     },
     'GBP':  {
         'currency': 0.740774,
