@@ -6,7 +6,7 @@ var ciService = {};
 var currencies = {
     'USD':  {
         'currency': 1,
-        'sign':     '$'
+        'sign':     '&dollar;'
     },
     'EUR':  {
         'currency': 0.844798,
@@ -14,7 +14,7 @@ var currencies = {
     },
     'GBP':  {
         'currency': 0.740774,
-        'sign':     ''
+        'sign':     '&pound;'
     },
     'ILS':  {
         'currency': 3.60177,
@@ -22,19 +22,19 @@ var currencies = {
     },
     'CAD':  {
         'currency': 1.28549,
-        'sign':     ''
+        'sign':     'C&dollar;'
     },
     'AUD':  {
         'currency': 1.33617,
-        'sign':     ''
+        'sign':     'A&dollar;'
     },
     'INR':  {
         'currency': 67.8283,
-        'sign':     ''
+        'sign':     '&#x20B9;'
     },
     'SGD':  {
         'currency': 1.34248,
-        'sign':     ''
+        'sign':     'S&dollar;'
     }
 };
 

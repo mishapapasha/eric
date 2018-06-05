@@ -13,5 +13,5 @@ ccService2.convertAmount = function(amount, fromCurrency, toCurrency) {
     // console.log(activeToCurrency);
     var result = ciService.getCurrencyByKey(baseCurrency).currency;
     result = result * (amount.value / activeFromCurrency.currency) * activeToCurrency.currency;
-    return result.toFixed(1) + activeToCurrency.sign;
+    return result.toFixed(1) + ' ' +  activeToCurrency.sign;
 }
